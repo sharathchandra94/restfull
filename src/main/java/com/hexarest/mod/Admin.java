@@ -3,6 +3,7 @@ package com.hexarest.mod;
 public class Admin {
 	private String Fin;
 	private String Docu;
+	private String stg;
 
 	public String getFin() {
 		return Fin;
@@ -28,5 +29,13 @@ public class Admin {
 		this.stg = stg;
 	}
 
-	private String stg;
+	public Admin() {
+
+	}
+
+	@Override
+	public String toString() {
+		return "Admin [Fin=" + Fin + ", Docu=" + Docu + ", stg=" + stg + "]";
+	}
+
 }
