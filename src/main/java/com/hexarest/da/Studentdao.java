@@ -80,6 +80,7 @@ public class Studentdao {
 		}
 		return stu;
 	}
+
 	public Student getStudentByStandarad(String student_standard) {
 		List<Student> students = new ArrayList<Student>(getAllStudents());
 		Student stu = null;
@@ -98,7 +99,7 @@ public class Studentdao {
 		}
 		return stu;
 	}
-	
+
 	public Student getStudentByGroup(String student_standard) {
 		List<Student> students = new ArrayList<Student>(getAllStudents());
 		Student stu = null;
@@ -116,47 +117,27 @@ public class Studentdao {
 			}
 		}
 		return stu;
-		
-		
-	
-			
-		}
-	public	Student createStudent(Student stu){
-		Student student =new Student();
+
+	}
+
+	public Student createStudent(Student stu) {
+		Student student = new Student();
 		student.setStudent_name(stu.getStudent_name());
 		student.setStudent_group(stu.getStudent_group());
 		student.setStudent_standard(stu.getStudent_standard());
-		return student;	
+		return student;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	}
-	
-	
-	
+}
 
-	/*public static void main(String args[]) {
-		Studentdao dao = new Studentdao();
-
-		Collection<Student> stud = dao.getAllStudents();
-
-		// System.out.println(stud);
-		Student stud2 = new Student();
-		Student stud1 = dao.getStudentById(6);
-		Student stud3 = dao.getStudentByName("sharath 1");
-
-		System.out.println(stud3);
-	}
-*/
+/*
+ * public static void main(String args[]) { Studentdao dao = new Studentdao();
+ * 
+ * Collection<Student> stud = dao.getAllStudents();
+ * 
+ * // System.out.println(stud); Student stud2 = new Student(); Student stud1 =
+ * dao.getStudentById(6); Student stud3 = dao.getStudentByName("sharath 1");
+ * 
+ * System.out.println(stud3); }
+ */
 

@@ -41,6 +41,12 @@ public class EmployeeControl {
 	public Employee createEmployee(Employee emp) {
 		Employee newempl = dao.createEmployee(emp);
 		return newempl;
+		
+	}
+	@RequestMapping(value="/employees",method= RequestMethod.DELETE)
+		public Employee deleteEmployee(@PathVariable("id") Integer id){
+		Employee delemp=dao.deleteEmployee(id);
+			return delemp;
 	}
 	
 	
