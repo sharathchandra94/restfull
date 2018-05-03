@@ -2,6 +2,7 @@ package com.hexarest.control;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,11 +14,15 @@ import com.hexarest.mod.Employee;
 @RequestMapping("/get")
 @RestController
 public class EmployeeControl {
-	Employeedao dao = new Employeedao();
 
+	Employeedao dao = new Employeedao();
+	static Logger log = Logger.getLogger(EmployeeControl.class.getName());
+	
 	@RequestMapping(value = "/employees", method = RequestMethod.GET)
 	public List<Employee> getEmployees() {
 		List<Employee> output = dao.dummyEmployees();
+		log.info("started employees");
+		
 		// String json = new Gson().toJson(output);
 		return output;
 
@@ -36,7 +41,8 @@ public class EmployeeControl {
 	public Employee createEmployee(Employee emp) {
 		Employee newempl = dao.createEmployee(emp);
 		return newempl;
-
 	}
+	
+	
 
 }
