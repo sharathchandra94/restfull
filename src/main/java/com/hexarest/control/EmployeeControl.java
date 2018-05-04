@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.method.support.ModelAndViewContainer;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.hexarest.da.Employeedao;
 import com.hexarest.mod.Employee;
@@ -19,13 +21,14 @@ public class EmployeeControl {
 	static Logger log = Logger.getLogger(EmployeeControl.class.getName());
 	
 	@RequestMapping(value = "/employees", method = RequestMethod.GET)
-	public List<Employee> getEmployees() {
+	//public List<Employee>  getEmployees() {
+	public ModelAndView  getEmployees() {
 		List<Employee> output = dao.dummyEmployees();
 		log.info("started employees");
-		
+		ModelAndView model=new ModelAndView("employees","employees",output);
 		// String json = new Gson().toJson(output);
-		return output;
-
+		//return output;
+		return model;
 	}
 
 	@RequestMapping(value = "/employees/{id}", method = RequestMethod.GET)

@@ -69,6 +69,23 @@ public class Employeedao {
 		return empn;
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	/*
 	 * public static void main(String args[]) { Employeedao dao1 =new
