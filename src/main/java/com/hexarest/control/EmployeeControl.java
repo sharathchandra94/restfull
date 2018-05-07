@@ -51,7 +51,6 @@ public class EmployeeControl {
 	public Employee createEmployee(Employee emp) {
 		Employee newempl = dao.createEmployee(emp);
 		return newempl;
-
 	}
 
 	@RequestMapping(value = "/employees", method = RequestMethod.DELETE)

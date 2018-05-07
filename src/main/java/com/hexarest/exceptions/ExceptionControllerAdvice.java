@@ -15,7 +15,6 @@ public class ExceptionControllerAdvice {
 		EmployyeErrorResponse error = new EmployyeErrorResponse();
 		error.setErrorcode(HttpStatus.INTERNAL_SERVER_ERROR.value());
 		error.setErrormsg(ex.getMessage());
-		
 		return new ResponseEntity<EmployyeErrorResponse>(error, HttpStatus.OK);
 	}
 	
