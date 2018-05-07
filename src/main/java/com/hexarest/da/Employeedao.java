@@ -3,6 +3,7 @@ package com.hexarest.da;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.hexarest.exceptions.EmployeeException;
 import com.hexarest.mod.Employee;
 
 public class Employeedao {
@@ -21,7 +22,7 @@ public class Employeedao {
 
 	}
 
-	public Employee getEmployeeById(int id) {
+	public Employee getEmployeeById(int id)   {
 		List<Employee> empls = dummyEmployees();
 		for (Employee emp : empls) {
 			if (emp.getId() == id) {
